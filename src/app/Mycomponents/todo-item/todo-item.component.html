@@ -1,0 +1,15 @@
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-start my-2">
+        <div class="ms-2 me-auto">
+            <h4 [ngClass]="{'strike': !todo!.active}">{{ todo?.title }}</h4>
+            <p [ngClass]="{'strike': !todo!.active}">{{ todo?.desc }}</p>
+            <small [ngClass]="{'strike': !todo!.active}">{{ todo?.date }}</small>
+            <br/>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="markdone" (click)="onCheckboxClick(todo!)" [checked]="!todo!.active">
+                <label class="form-check-label" for="markdone">Mark As Done!</label>
+            </div>
+            <button class="btn btn-danger" (click)="onClick(todo!)">Delete</button>
+        </div>
+    </li>
+</ul>
